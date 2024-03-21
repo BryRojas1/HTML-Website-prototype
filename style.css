@@ -1,0 +1,434 @@
+:root {
+    --primary-color: #015fca;
+    --primary-bg-color: #5e5858;
+    --light-color: #fff;
+    --pop-color: #015fca;
+    --dark-primary-color: #fff;
+    --dark-primary-bg-color: #333;
+    --dark-light-color: #333;
+    --dark-pop-color: #ff6347;
+}
+
+body.light {
+    --primary-color: #015fca;
+    --primary-bg-color: #5e5858;
+    --light-color: #fff;
+    --pop-color: #015fca;
+}
+
+body.dark {
+    --primary-color: #746e6e;
+    --primary-bg-color: #757474;
+    --light-color: #333;
+    --pop-color: #ff6347;
+}
+
+
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    min-height: 100vh;
+    line-height: 1.5;
+    background: linear-gradient(to bottom, var(--primary-bg-color), var(--light-color));
+    color: var(--primary-color);
+}
+
+input,
+textarea {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header,
+footer {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Utility Classes */
+.font-sm {
+    font-size: 0.8rem;
+}
+
+.right-indent {
+    padding-left: 2em;
+}
+
+.center-text {
+    text-align: center;
+}
+
+/* Overall layouts */
+body {
+    display: grid;
+    grid-template-columns: 1fr 80% 1fr;
+    grid-template-rows: 6rem 1fr 3em;
+    min-height: 100vh;
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    z-index: 1000;
+    height: 6rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    z-index: 1000;
+    height: 3rem;
+}
+
+/* Header styles */
+h1 {
+    padding-left: 1rem;
+}
+
+nav li {
+    padding-right: 1rem;
+    font-size: 1.5rem;
+}
+
+nav a {
+    color: white;
+}
+
+nav a:hover,
+nav a:active {
+    border-bottom: 4px solid var(--primary-bg-color);
+}
+
+/* Header layouts */
+header h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0rem;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    border-bottom: 4px solid var(--primary-bg-color);
+}
+
+/* Main styles */
+main {
+    padding: 1rem;
+    background-color: var(--light-color);
+}
+
+h2 {
+    color: var(--pop-color);
+    margin-bottom: 1rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Home page content */
+main li {
+    background-image: url("../images/logosupp.avif");
+    background-repeat: no-repeat;
+    background-size: 1em 1em;
+    padding-left: 1.5em;
+    background-position: 0 0.2em;
+}
+
+main a {
+    color: var(--primary-bg-color);
+}
+
+main a:hover,
+main a:active {
+    border-bottom: 2px solid var(--primary-bg-color);
+}
+
+/* Menu page content */
+table {
+    border: 3px solid var(--primary-bg-color);
+    border-collapse: collapse;
+    width: 100%;
+    margin-inline: auto;
+}
+
+thead tr {
+    background-color: var(--primary-bg-color);
+    color: white;
+}
+
+th,
+td {
+    padding: 0.3rem;
+    text-align: center;
+}
+
+tbody tr:nth-child(4n) {
+    border-bottom: 3px solid var(--primary-bg-color);
+}
+
+caption {
+    font-weight: bold;
+    text-align: right;
+    font-style: italic;
+}
+
+.preview-container {
+    margin: 1rem auto;
+    max-width: 850px;
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.preview {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    display: block; 
+}
+  
+.preview-container figcaption {
+    background-color: #015fca;
+    color: #fff;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+.gallery {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+
+.carousel-container{
+    width: 80%;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.carousel{
+    list-style-type: none;
+    width: 100%;
+    height: 600px;
+
+    position: relative;
+}
+
+.carousel-item{
+    height: 100%;
+    width: 100%;
+
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transition: 300ms opacity ease-in-out;
+    transition-delay: 300ms;
+}
+
+.carousel-item.active{
+    opacity: 1;
+    transition-delay: 0ms;
+}
+
+.carousel-item > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+
+}
+
+.carousel-btn{
+    background: transparent; 
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #015fca;
+    position: absolute;
+    top: 50%;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.carousel-btn.left{
+    left: -2.5rem;
+
+}
+
+.carousel-btn.right{
+    right: -2.5rem;
+    
+}
+
+.carousel-btn:hover{
+    cursor: pointer;
+    background-color: #015fca;
+    color: grey;
+}
+
+.carousel-nav{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.7rem;
+    gap: 0.5rem;
+}
+
+.nav-item{
+    height: 6px;
+    width:  6px;
+    background-color: black;
+    border-radius: 50%;
+    
+    opacity: 0.3;
+
+    transition: 300ms opacity ease-in-out;
+}
+
+.nav-item.active{
+    opacity: 0.7;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="datetime-local"],
+input[type="number"],
+textarea {
+    border: 2px solid var(--primary-color);
+    margin-bottom: 0.5em;
+    width: 100%;
+    padding: 0.6em;
+}
+
+textarea {
+    height: 8em;
+}
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+.btn {
+    display: flex;
+    justify-content: right;
+}
+
+/* Style 'container-content' class */
+.container-content {
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(17, 12, 46, 0.8);
+}
+
+/* Main content area layouts */
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Style for both 'container-img' and 'container-content' elements */
+.container-img,
+.container-content {
+    flex-basis: 300px;
+    flex-grow: 3;
+    max-width: 800px;
+}
+
+/* Footer layouts */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

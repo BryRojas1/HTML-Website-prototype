@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your Name">
+    <title>Cleaning Crew</title>
+    <link rel="icon" type="image/x-icon" href="images/Cleanlogo.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Cleaning Crew</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="BasicClean.html">Basic Cleaning</a></li>
+                <li><a href="DeepClean.html">Deep Cleaning</a></li>
+                <li><a href="moveclean.html">Move out/in Cleaning Service</a></li>
+                <li><a href="estimate.html">Estimate Calculation</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <figure class="preview-container">
+            <img class="preview" src="images/bcleanpt2.jpg" alt="cleaner">
+            <figcaption>Basic Cleaning</figcaption>
+        </figure>
+
+        <div class="gallery">
+            <img src="images/bcleanpt2.jpg" alt="Example" >
+            <img src="images/basicclean.jpg" alt="Cleaning 1">
+            <img src="images/bclean.jpg" alt="Cleaning 2">
+            <img src="images/bclean2.jpg" alt="Cleaning 3">
+
+        </div>
+        
+        <div class="container-content">
+            <h2 class="center-text">Basic Cleaning:</h2>
+            <article> 
+                <h3> Our basic cleaning service is designed to keep your home clean and fresh on a weekly or biweekly basis. We will take care of all essential cleaning tasks such as dusting, vacuuming, mopping floors to keep your house looking clean. With our basic cleaning service, we provide a thorugh room, hallway, living room, kitchen, and bathrooms cleaning. With the basic cleaning for kitchen our employees will be cleaning the countertops, sinks, exterior of the appliances, cabinet doors and for bathrooms we clean and disinfect toilets, showers, bathtubs, and sinks.   
+                </h3>        
+                </article> 
+
+            <form id="cleaningForm">
+                <div>
+                    <input type="text" name="name" id="name" placeholder="Name" required>
+                </div>
+        
+                <div>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+            
+                <div>
+                    <input type="tel" name="phone" id="phone" placeholder="Phone number" required>
+                </div>
+                    
+                <div>
+                    <textarea name="address" id="address" placeholder="Address" required></textarea>
+                </div>
+                <div>
+                    <input type="datetime-local" name="reservation" id="reservation" required>
+                </div>
+                <div>
+                    <label for="rooms">Number of Rooms:</label>
+                    <input type="number" name="rooms" id="rooms" min="1" required>
+                </div>
+                <div>
+                    <label for="bathrooms">Number of Bathrooms:</label>
+                    <input type="number" name="bathrooms" id="bathrooms" min="1" required>
+                </div>
+                <div>
+                    <label for="hallways">Number of Hallways:</label>
+                    <input type="number" name="hallways" id="hallways" min="1" required>
+                </div>
+                <div>
+                    <label for="livingRooms">Number of Living Rooms:</label>
+                    <input type="number" name="livingRooms" id="livingRooms" min="1" required>
+                </div>
+                <div>
+                    <input type="number" name="squareFeet" id="squareFeet" placeholder="Total Square Feet" required>
+                </div>
+                <div>
+                    <textarea name="message" id="message" placeholder="Additional Information"></textarea>
+                </div>
+        
+                <div class="btn">
+                    <input type="submit" name="submit" id="submit" value="Request Cleaning">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p class="font-sm center-text">&copy; 2023 Cleaning Crew. All rights reserved.</p>
+    </footer>
+</body>
+</html>

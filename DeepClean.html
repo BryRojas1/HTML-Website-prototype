@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your Name">
+    <title>Cleaning Crew</title>
+    <link rel="icon" type="image/x-icon" href="images/Cleanlogo.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Cleaning Crew</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="BasicClean.html">Basic Cleaning</a></li>
+                <li><a href="DeepClean.html">Deep Cleaning</a></li>
+                <li><a href="moveclean.html">Move out/in Cleaning Service</a></li>
+                <li><a href="estimate.html">Estimate Calculation</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="carousel-container">
+            <button class="carousel-btn left"><i class="fa-solid fa-chevron-left"></i></button>
+            <ul class="carousel">
+                <li class="carousel-item active"><img src="images/deepclean.jpg" alt="Clean 1"></li>
+                <li class="carousel-item"><img src="images/dclean.jpg" alt="clean 2"></li>
+                <li class="carousel-item"><img src="images/dclean2.jpg" alt="clean 3"></li>
+                <li class="carousel-item"><img src="images/dclean3.jpg" alt="Clean 4"></li>
+                <li class="carousel-item"><img src="images/declean.jpg" alt="Clean 5"></li>
+            </ul>
+            <button class="carousel-btn right"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="carousel-nav">
+                <div class="nav-item active"></div>
+                <div class="nav-item"></div>
+                <div class="nav-item"></div>
+                <div class="nav-item"></div>
+                <div class="nav-item"></div>
+            </div>
+        </div> 
+        <div class="container-content">
+            <h2 class="center-text">Deep Cleaning:</h2>
+            <article>
+                <h3>Our deep cleaning service is a top to bottom clena making sure that no spots are missed and is sparkly shine. We recommend to get the deep cleaning package if you not recieved a professional cleaning or if you beleive that you house needs a deep clean. A deep cleaning includes of all the services of a basic clean but with more effort and attention put into areas that need to be cleaned properly that may have forgotten to be clean over time. This in-depth cleaning will make your home super clean and refreshing and we highly recommend it as a first time customer.
+                </h3>    
+            </article>
+
+            <form id="cleaningForm">
+                <div>
+                    <input type="text" name="name" id="name" placeholder="Name" required>
+                </div>
+        
+                <div>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+            
+                <div>
+                    <input type="tel" name="phone" id="phone" placeholder="Phone number" required>
+                </div>
+                    
+                <div>
+                    <textarea name="address" id="address" placeholder="Address" required></textarea>
+                </div>
+                <div>
+                    <input type="datetime-local" name="reservation" id="reservation" required>
+                </div>
+                <div>
+                    <label for="rooms">Number of Rooms:</label>
+                    <input type="number" name="rooms" id="rooms" min="1" required>
+                </div>
+                <div>
+                    <label for="bathrooms">Number of Bathrooms:</label>
+                    <input type="number" name="bathrooms" id="bathrooms" min="1" required>
+                </div>
+                <div>
+                    <label for="hallways">Number of Hallways:</label>
+                    <input type="number" name="hallways" id="hallways" min="1" required>
+                </div>
+                <div>
+                    <label for="livingRooms">Number of Living Rooms:</label>
+                    <input type="number" name="livingRooms" id="livingRooms" min="1" required>
+                </div>
+                <div>
+                    <input type="number" name="squareFeet" id="squareFeet" placeholder="Total Square Feet" required>
+                </div>
+                <div>
+                    <textarea name="message" id="message" placeholder="Additional Information"></textarea>
+                </div>
+        
+                <div class="btn">
+                    <input type="submit" name="submit" id="submit" value="Request Cleaning">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p class="font-sm center-text">&copy; 2023 Cleaning Crew. All rights reserved.</p>
+    </footer>
+</body>
+</html>
